@@ -50,9 +50,13 @@ section points to GitHub instead.
 
 **No client names.** Employers are named (Cervus Consult, Team4, Flossbach von
 Storch) — that is Sascha's own employment history. Clients of those employers
-are described by sector only („major parcel delivery provider“,
-„public-sector defence organisation“), because the right to name them as a
-reference generally sits with the employer, not with the individual, and the
-former defence work carries its own confidentiality. Project code names were
-replaced with neutral titles for the same reason. The detailed list with real
-names stays offline, for applications handed over on request.
+are described by sector plus a broad size band („parcel delivery provider,
+5,000+ staff“), because the right to name a client as a reference generally
+sits with the employer, not with the individual, and the former defence work
+carries its own confidentiality. Project code names were replaced with neutral
+titles for the same reason. The detailed list with real names stays offline,
+for applications handed over on request.
+
+Keep the size bands **broad**. They exist to convey project scale, and an exact
+headcount combined with a sector and a region identifies a company outright —
+which would defeat the point of the descriptor.
