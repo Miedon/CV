@@ -39,11 +39,20 @@ files directly in a browser — there is nothing to install or compile.
   and hero glows drop out, cards avoid page breaks, link URLs get spelled out.
 - Fonts (Inter, Newsreader) come from Google Fonts with a `display=swap` and a
   system-font fallback, so the page stays readable if they fail to load.
-- **Replacing the photo:** drop the new file anywhere and run
-  `python tools/make-portrait.py <file>` (needs Pillow), then move the original
-  to `images/portrait-source.jpg`. The script centre-crops to a square, strips
-  EXIF and writes both variants, so the HTML needs no change. Remember the
-  `og:image` tag points at `portrait-800.jpg` in both pages.
+- **Replacing the photo:** copy the new file to `images/portrait-source.jpg`
+  and run `python tools/make-portrait.py images/portrait-source.jpg` (needs
+  Pillow). It strips EXIF and writes both variants, so the HTML needs no
+  change. Remember the `og:image` tag points at `portrait-800.jpg`.
+  Without `--box` the script takes the centre square, which only works when the
+  subject is centred. The current source is a portrait-orientation studio shot,
+  so it is cropped to head and shoulders explicitly:
+
+  ```
+  python tools/make-portrait.py images/portrait-source.jpg --box 150,148,1500,1498
+  ```
+
+  Check the result before committing — the avatar is round, so the corners of
+  the square are clipped and the head needs headroom.
 - The LinkedIn and GitHub links carry `rel="me"`, which ties the three profiles
   together as the same person.
 
