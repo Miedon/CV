@@ -12,7 +12,7 @@ and the Power Platform. Bilingual, static, no build step.
 
 | File | Purpose |
 | --- | --- |
-| `index.html` | English page — hero, career & projects, skills, education, contact |
+| `index.html` | English page — hero, career & projects, current focus, skills, education, contact |
 | `de.html` | German page, same sections and same section `id`s |
 | `styles.css` | All styling, shared by both pages |
 | `app.js` | Progressive enhancement only: sticky-bar shadow, scroll reveal, nav highlight, footer year |
@@ -26,7 +26,8 @@ files directly in a browser — there is nothing to install or compile.
 
 - **Both languages must be edited together.** The pages are deliberate
   duplicates, not generated; a change to one belongs in the other. The section
-  `id`s (`career`, `skills`, `education`, `interests`, `contact`) are shared, so
+  `id`s (`career`, `focus`, `skills`, `education`, `interests`, `contact`) are
+  shared, so
   the `EN`/`DE` switch and the `hreflang` links keep working.
 - Colours, spacing and type live as custom properties in `:root` at the top of
   `styles.css`, with a dark-mode override right below it. Light and dark follow
@@ -55,6 +56,9 @@ files directly in a browser — there is nothing to install or compile.
   the square are clipped and the head needs headroom.
 - The LinkedIn and GitHub links carry `rel="me"`, which ties the three profiles
   together as the same person.
+- The "current focus" section is marked **Learning**, not claimed as
+  experience. Keep that badge until it genuinely is experience, and move the
+  topic into the skills list when it is.
 
 ## Privacy
 

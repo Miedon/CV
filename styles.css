@@ -798,10 +798,45 @@ main section:last-of-type {
   box-shadow: var(--shadow-sm);
 }
 
+.card-note h3 {
+  margin: 0 0 .7rem;
+  font-size: 1.12rem;
+}
+
 .card-note p {
   margin: 0;
-  max-width: 38rem;
+  max-width: 42rem;
   color: var(--muted);
+}
+
+.card-note p + p {
+  margin-top: .8rem;
+}
+
+.card-note .tags {
+  margin-top: 1.2rem;
+}
+
+.card-note .tags li {
+  background: var(--bg-2);
+}
+
+/* accent rail, matching the career cards */
+.card-accent {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-accent::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 1.5rem;
+  bottom: 1.5rem;
+  width: 3px;
+  border-radius: 0 3px 3px 0;
+  background: linear-gradient(var(--accent), var(--accent-2));
+  opacity: .85;
 }
 
 /* ---------------- footer ---------------- */
