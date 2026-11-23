@@ -16,7 +16,8 @@ and the Power Platform. Bilingual, static, no build step.
 | `de.html` | German page, same sections and same section `id`s |
 | `styles.css` | All styling, shared by both pages |
 | `app.js` | Progressive enhancement only: sticky-bar shadow, scroll reveal, nav highlight, footer year |
-| `images/` | Portrait |
+| `images/` | `portrait-400.jpg` and `portrait-800.jpg` are what the pages load via `srcset`; `portrait-source.jpg` is the full-size original kept for regenerating them |
+| `tools/make-portrait.py` | Rebuilds the two portrait variants from a source photo |
 
 GitHub Pages serves the repo root from `master`. To work on it, open the HTML
 files directly in a browser — there is nothing to install or compile.
@@ -38,6 +39,13 @@ files directly in a browser — there is nothing to install or compile.
   and hero glows drop out, cards avoid page breaks, link URLs get spelled out.
 - Fonts (Inter, Newsreader) come from Google Fonts with a `display=swap` and a
   system-font fallback, so the page stays readable if they fail to load.
+- **Replacing the photo:** drop the new file anywhere and run
+  `python tools/make-portrait.py <file>` (needs Pillow), then move the original
+  to `images/portrait-source.jpg`. The script centre-crops to a square, strips
+  EXIF and writes both variants, so the HTML needs no change. Remember the
+  `og:image` tag points at `portrait-800.jpg` in both pages.
+- The LinkedIn and GitHub links carry `rel="me"`, which ties the three profiles
+  together as the same person.
 
 ## Privacy
 

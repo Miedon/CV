@@ -441,6 +441,17 @@ h1 {
   transform: translateY(0);
 }
 
+.btn svg {
+  width: 1.05em;
+  height: 1.05em;
+  flex: 0 0 auto;
+  opacity: .85;
+}
+
+.btn:hover svg {
+  opacity: 1;
+}
+
 .btn-primary {
   border-color: transparent;
   background: linear-gradient(135deg, var(--accent), var(--accent-2));
